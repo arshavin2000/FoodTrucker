@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tvo-TW-nhy">
-                                <rect key="frame" x="30" y="120" width="354" height="100.33333333333331"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tvo-TW-nhy">
+                                <rect key="frame" x="30" y="75" width="354" height="100.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-ad-TW5">
                                         <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="20.333333333333332"/>
@@ -36,6 +36,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyE-1w-v4g">
                                         <rect key="frame" x="0.0" y="70.333333333333343" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="SaveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsR-Hf-niL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -51,6 +54,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mealLabel" destination="wmw-ad-TW5" id="u4l-qa-34H"/>
+                        <outlet property="mealName" destination="dOk-TQ-ni6" id="MHZ-Jf-Xyk"/>
+                        <outlet property="saveButton" destination="xyE-1w-v4g" id="xEu-WS-gyO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
