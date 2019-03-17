@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tvo-TW-nhy">
-                                <rect key="frame" x="30" y="75" width="354" height="100.33333333333331"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tvo-TW-nhy">
+                                <rect key="frame" x="30" y="119.99999999999997" width="354" height="430.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-ad-TW5">
                                         <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="20.333333333333332"/>
@@ -40,6 +40,16 @@
                                             <action selector="SaveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsR-Hf-niL"/>
                                         </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="vc9-OB-k3m">
+                                        <rect key="frame" x="0.0" y="110.33333333333337" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vc9-OB-k3m" secondAttribute="height" multiplier="1:1" id="vUC-TU-fpk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fhR-Si-F8g" appends="YES" id="X2O-e0-qiU"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="dOk-TQ-ni6" secondAttribute="trailing" id="Hgc-l1-WAY"/>
@@ -55,14 +65,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="mealImage" destination="vc9-OB-k3m" id="DKg-6C-eVF"/>
                         <outlet property="mealLabel" destination="wmw-ad-TW5" id="u4l-qa-34H"/>
                         <outlet property="mealName" destination="dOk-TQ-ni6" id="MHZ-Jf-Xyk"/>
                         <outlet property="saveButton" destination="xyE-1w-v4g" id="xEu-WS-gyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fhR-Si-F8g">
+                    <connections>
+                        <action selector="recognitionAction:" destination="BYZ-38-t0r" id="07c-WN-buw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="124.72826086956523"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="3322" height="1048"/>
+    </resources>
 </document>

@@ -16,6 +16,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var mealName: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var mealLabel: UILabel!
+    @IBOutlet weak var mealImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
         mealLabel.text = mealName.text
     }
     
+    
+    @IBAction func recognitionAction(_ sender: UITapGestureRecognizer) {
+    }
     
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
